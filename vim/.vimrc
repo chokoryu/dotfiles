@@ -28,7 +28,7 @@ if dein#load_state(s:dein_dir)
 
   " Add or remove plugins:
   call dein#add('cohama/lexima.vim') " auto complete bracketes
-  call dein#add('ryanoasis/vim-devicons') " adds icons to vimfier
+  call dein#add('ryanoasis/vim-devicons') " adds icons to vimfiler
   call dein#add('airblade/vim-gitgutter') " git plugin
   call dein#add('tpope/vim-fugitive') " fugitive
   call dein#add('ervandew/supertab') " tab auto complete
@@ -54,12 +54,31 @@ syntax on
 
 " set colour scheme
 colorscheme nord
+set t_Co=256
+set cursorline
+hi clear CursorLine
+highlight CursorLine ctermbg=238
+
+" for transparent background
+if !has('gui_running')
+  augroup seiya
+    autocmd!
+    autocmd VimEnter,ColorScheme * highlight Normal ctermbg=none
+    autocmd VimEnter,ColorScheme * highlight LineNr ctermbg=none
+    autocmd VimEnter,ColorScheme * highlight SignColumn ctermbg=none
+    autocmd VimEnter,ColorScheme * highlight VertSplit ctermbg=none
+    autocmd VimEnter,ColorScheme * highlight NonText ctermbg=none
+  augroup END
+endif
 
 " Disable the default Vim startup message.
 set shortmess+=I
 
 " Show line numbers at  the left of editor.
 set number
+
+" Set tab as 2 spaces
+set tabstop=2
 
 " Enable relative line numbering mode.
 " The current line shows the true line number, while all other lines (above and 
