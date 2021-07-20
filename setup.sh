@@ -17,6 +17,7 @@ git clone https://github.com/chokoryu/dotfiles.git ${DOT_DIR}
 #------------------------------------------------------------------------------
 sudo apt install vim
 ln -sf ${DOT_DIR}/vim/.vimrc ~/.vimrc
+mkdir ~/.vim/undo
 
 #------------------------------------------------------------------------------
 # install and setup tmux

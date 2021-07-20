@@ -6,7 +6,7 @@
 # - Git branch and dirty state (if inside a git repo)
 
 function _git_branch_name
-  echo (command git symbolic -ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+  echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
 end
 
 function _git_is_dirty
@@ -27,6 +27,9 @@ function fish_prompt
   set -l cwd $blue(pwd | sed "s:^$HOME:~:")
 
   # Output the prompt, left to right
+
+  # Add a newline before new prompts
+  #echo -e ''
 
   # Display [venvname] if in a virtualenv
   if set -q VIRTUAL_ENV
@@ -49,7 +52,7 @@ function fish_prompt
     else
       set git_info $green '(' $git_branch ')' $normal
     end
-    echo -n -s ' . ' $git_info $normal
+    echo -n -s ' · ' $git_info $normal
   end
 
   set -l prompt_color $red
@@ -58,7 +61,24 @@ function fish_prompt
   end
 
   echo -e ''
+  # vim
+#    if test -z (string match -ri '^no|false|0$' $tomita_vi_mode)
+#    printf '['
+#    switch $fish_bind_mode
+#      case default
+#        set_color --bold red
+#        printf 'N'
+#      case insert
+#        set_color --bold green
+#        printf 'I'
+#      case visual
+#        set_color --bold magenta
+#        printf 'N'
+#    end
+#    set_color normal
+#    printf '] '
+#  end
 
-  # prompt icon
+  # fish icon
   echo -e -n -s $prompt_color '> ' $normal
 end

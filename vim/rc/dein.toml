@@ -1,0 +1,55 @@
+# dein itself
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# auto complete brackets
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+# auto complete tab
+[[plugins]]
+repo = 'ervandew/supertab'
+
+# comment toggle
+[[plugins]]
+repo = 'tyru/caw.vim'
+
+# for vimfiler
+[[plugins]]
+repo = 'Shougo/vimfiler'
+
+# light weight filer
+[[plugins]]
+repo = 'Shougo/vimfiler'
+
+# enable icons in vimfiler
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+# statis code check
+[[plugins]]
+repo = 'w0rp/ale'
+
+# visualize indents
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+# nord-theme
+[[plugins]]
+repo = 'arcticicestudio/nord-vim'
+
+# git
+[[plugins]]
+repo = 'ariblade/vim-gitgutter'
+
+# fugitive
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# auto complete code
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = ['python']
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
