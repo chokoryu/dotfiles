@@ -3,7 +3,7 @@
 let s:dein_dir = expand('~/.cache/dein')
 
 " dein.vim install directory
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo.dein.vim'
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 " download & install dein.vim from github if not installed
 if &runtimepath !~# '/dein.vim'

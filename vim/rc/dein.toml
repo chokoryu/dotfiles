@@ -40,7 +40,7 @@ repo = 'arcticicestudio/nord-vim'
 
 # git
 [[plugins]]
-repo = 'ariblade/vim-gitgutter'
+repo = 'airblade/vim-gitgutter'
 
 # fugitive
 [[plugins]]
