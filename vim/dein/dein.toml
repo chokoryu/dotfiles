@@ -14,10 +14,6 @@ repo = 'ervandew/supertab'
 [[plugins]]
 repo = 'tyru/caw.vim'
 
-# for vimfiler
-[[plugins]]
-repo = 'Shougo/vimfiler'
-
 # light weight filer
 [[plugins]]
 repo = 'Shougo/vimfiler'
